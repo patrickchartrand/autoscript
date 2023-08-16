@@ -1,0 +1,96 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="icon" href="../images/graphique.png" type="image/png">
+      <title>AutoScript</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="../javascript/script.js" type="text/javascript"></script></head>
+   <body>
+      <header class="lecture">
+         <nav><a href="index.html">Le projet</a><div><img id="menu" src="../images/menu.png"><a href="liminaire.html">Liminaire</a><a href="page-1.html">Lecture</a><a href="glossaire.html">Glossaire</a></div>
+         </nav>
+      </header>
+      <main>
+         <article>
+            <h2>La démarche philologique</h2>
+            <p>Les erreurs orthographiques et les fautes dactylographiques parmi les plus manifestes
+               ont été corrigées.</p>
+            <p>
+               L'édition numérique des textes s'applique à :
+               </p>
+            <ul class="info">
+               <li>la représentation graphique du caractère latin « s long » et de la ligature « &amp; »;</li>
+               <li>la conservation des majuscules, dont l'irrégularité dans l'écriture est une particularité
+                  naturelle du moyen français;</li>
+               <li>la dissimilation des variantes graphiques u/v et i/j, consonnes confondues jusqu'à
+                  la Renaissance du fait qu'elles soient absentes du latin;</li>
+               <li>l'assouplissement des abréviations, notamment des tildes tels que ã (an ou am);</li>
+               <li>l'agglutination des mots séparés (ce pendant/cependant);</li>
+               <li>la division des mots agglutinés (dixmille/dix mille).</li>
+            </ul>
+            <p>La transcription de chaque page n'inclut ni leur titre courant ni leur numéro et leur
+               signature puisque seule l'oeuvre littéraire, abstraite de l'ensemble du recueil, est
+               ciblée ici.</p>
+            <p>La ponctuation originale a été sauvegardée.</p>
+            <p>Les marques de citations respectent celle de l'édition originale.</p>
+            <p>La division des lignes respecte celle de l'édition originale.</p>
+            <p>Un glossaire explicite le sens vieilli ou perdu de mots et d'expressions, puis des
+               notes renseignent sur des références historiques implicitement évoquée et sur
+               chaque personnalités et noms présents dans le texte.</p><br><h2>Les témoins critiques</h2>
+            <p>E09 : édition de base.</p>
+            <p>E11 : Paris, Jean Millot, 1611 (Bibliothèque municipale de Lyon).</p>
+            <p>E12 : Paris, Jean Millot, 1612 (Bibliothèque nationale de France).</p>
+            <p>E17 : Paris, Adrian Perier, 1617 (Bibliothèque nationale de France).</p>
+            <p>E18 : Paris, Adrian Perier, 1618 (Bibliothèque municipale de Lyon).</p><br><h2>Référence du texte de base</h2>
+            <p>Lescarbot, Marc.
+               « Le Théâtre de Neptune en la Nouvelle-France ». Dans
+               <i>Les Muses de la Nouvelle-France</i>,
+               Imprimé par Jean Milot,
+               11-21. Paris,
+               1609.
+               </p>
+            <ul class="info">
+               <li>
+                  Conservé à la Bibliothèque et Archives nationales du Québec à
+                  Montréal dans le répertoire
+                  Patrimoine numérique, notice 0000088301.
+                  </li>
+            </ul><br><h2>Le protocole</h2>
+            <p>AutoScript est un projet de recherche-création en édition numérique sous les formats
+               d’encodage XML/TEI, XSLT et JavaScript à partir d’une pièce théâtrale datant de 1609,
+               et grâce à quatre autres versions de la performance parues entre 1611 et 1618. Le
+               protocole de développement suit notamment trois étapes s’enchainant automatiquement
+               l’une après l’autre : 1) la validation du document XML de base, à savoir des données
+               brutes des textes anciens à l’étude, via un schéma conforme aux recommandations de
+               la TEI; 2) la transformation des données par une feuille XSLT qui intègre une structure
+               de balisage sémantique adaptée aux langages de programmation Internet; 3 ) le traitement
+               des données textuelles pour le Web par des fonctions JavaScript qui permettent une
+               manipulation dynamique des documents HTML.</p>
+            <div class="media"><img src="../images/media.png" alt="https://www.espacecourbe.com/fr/creation/expertise/dev-xml-xslt/"></div>
+            <p>Pour y arriver, c'est au moyen du logiciel périphérique Saxon que s'effectue l'exploitation
+               des données XML : à partir du dossier contenant le fichier <i>saxon.jar</i>, les pages HTML sont toutes automatiquement générées via une seule commande Java.
+               La syntaxe XML du projet reprend notamment des balises sémantiques reliées au domaine
+               théâtral afin de bien représenter, entre autres, les didascalies et chacune des performances
+               oratoires. Le code a aussi été réalisé en prenant compte la nature diplomatique de
+               l’édition, c’est-à-dire que le balisage reprend tous les témoins de chaque variante
+               textuelle via une seule bibliographie critique dans le document. La structuration
+               des données peut, ensuite, prendre forme grâce à une feuille XSLT qui respecte un
+               schéma préalablement programmé. Par exemple, dans le cas où la lecture a été conçue
+               en plusieurs pages, notamment pour respecter la forme du livre original, la structure
+               veille alors à diviser automatiquement le document XML où les sauts de page sont indiqués
+               par une balise spécifique. La feuille XSLT permet aussi de transformer les données,
+               issues d’une interprétation et d’une analyse du texte, par une modélisation du balisage
+               au format HTML. C’est-à-dire que chaque élément XML est repris tour à tour pour être
+               converti sous une forme valide pour le Web. Enfin, le texte numérique est enrichi
+               lors de sa publication sur le Web non seulement par une stylisation CSS de l’interface,
+               mais aussi par une programmation JavaScript de plusieurs fonctions. C’est ici que
+               repose effectivement tout l’intérêt d’une édition critique sur le Web, car l’expérience
+               de lecture est considérablement augmentée au point où chaque lecteur peut configurer
+               le texte de différentes façons. Un système de boutons peut, en effet, offrir plusieurs
+               options d’affichage dynamique,et ce, avec quelques lignes de code Jquery.</p>
+         </article>
+      </main>
+      <footer>
+         <p>Diffusé par la Chaire de recherche du Canada sur les écritures numériques,<br>Université de Montréal</p><img src="../images/logo-1.png" width="250px">&nbsp;&nbsp;&nbsp;<img src="../images/logo-2.png" width="200px"><p>Creative Commons 4.0 (CC BY-SA)<br>© 2020</p>
+      </footer>
+   </body>
+</html>
