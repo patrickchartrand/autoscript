@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../XSLT/schema.xsl"?>
+<!DOCTYPE TEI [
+   <!-- old latin character -->
+   <!ENTITY s-long '<choice><orig>&#383;</orig><reg>s</reg></choice>' >
+   <!-- fixed space -->
+   <!ENTITY nbsp '&#160;&#160;'>
+]>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>AutoScript</title>
+                <principal>
+                    <name>Patrick Chartrand</name>
+                </principal>
+                <respStmt>
+                    <resp>Direction de recherche par</resp>
+                    <name>Marcello Vitali-Rosati</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <distributor>Chaire de recherche du Canada sur les écritures numériques</distributor>
+                <authority>Université de Montréal</authority>
+                <availability>
+                    <licence>Creative Commons 4.0 (CC BY-SA)</licence>
+                </availability>
+                <date>2020</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Montréal</settlement>
+                        <institution>Bibliothèque et Archives nationales du Québec</institution>
+                        <repository ref="http://numerique.banq.qc.ca/patrimoine/">Patrimoine numérique</repository>
+                        <idno type="notice">0000088301</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <p>
+                            <biblStruct>
+                                <monogr>
+                                    <title type="collection">Les Muses de la Nouvelle-France</title>
+                                    <title type="text">Le Théâtre de Neptune en la Nouvelle-France</title>
+                                    <author>Lescarbot, Marc</author>
+                                    <imprint>
+                                        <pubPlace>Paris</pubPlace>
+                                        <respStmt>
+                                            <resp>Imprimé par </resp>
+                                            <name>Jean Milot</name>
+                                        </respStmt>
+                                        <date when="1609">1609</date>
+                                    </imprint>
+                                    <extent>
+                                        <num type="pp.">11-21</num>
+                                    </extent>
+                                </monogr>
+                            </biblStruct>
+                        </p>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Livre imprimé à l'encre noire sur feuille de <material>papier</material>.</p>
+                                </support>
+                                <collation>
+                                    <p>[6], 66 p.; 8vo</p>
+                                    <dimensions>
+                                        <dim type="format">in-octavo</dim>
+                                    </dimensions>
+                                </collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <additional>
+                        <surrogates>
+                            <bibl>
+                                <ref target="http://collections.banq.qc.ca/ark:/52327/2036224"/>
+                            </bibl>
+                        </surrogates>
+                    </additional>
+                </msDesc>
+                <listWit>
+                    <witness xml:id="E09">E09 : édition de base.</witness>
+                    <witness xml:id="E11">E11 : Paris, Jean Millot, 1611 (Bibliothèque municipale de Lyon).</witness>
+                    <witness xml:id="E12">E12 : Paris, Jean Millot, 1612 (Bibliothèque nationale de France).</witness>
+                    <witness xml:id="E17">E17 : Paris, Adrian Perier, 1617 (Bibliothèque nationale de France).</witness>
+                    <witness xml:id="E18">E18 : Paris, Adrian Perier, 1618 (Bibliothèque municipale de Lyon).</witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>
+                    Le projet AutoScript cherche à conjuguer les technologies de l’information à l’étude des textes anciens
+                    afin de dynamiser les recherches philologiques et les expériences de lecture d’un corpus ancien. En effet, l’édition numérique
+                    permet au moyen d’outils informatiques et multimédias de créer une plate-forme Web, notamment consacrée ici au Théâtre de Neptune
+                    de Marc Lescarbot, où peut être présenté chaque document original en format phototypique, accompagné d’un prolégomène offrant des
+                    renseignements détaillés sur le corpus à l’étude. Tel que le Charrette Project réalisé à l’Université Princeton, le projet
+                    présenterait alors des analyses linguistiques et stylistiques pour chaque texte, ce qui mettrait à l’avant les différences textuelles
+                    entourant une même œuvre d’une version à l’autre. De plus, le choix du Web « soulève toute la question de l’accès au savoir, qui
+                    ne saurait être envisagé sous l’aspect d’une consultation passive » (cf. Ancien et moyen français sur le Web) :
+                    la diffusion sur les réseaux Internet facilite l’accès à des œuvres littéraires, à une culture et à la connaissance pour tous les lecteurs,
+                    savants ou non, d’une part, et invite au renouvèlement éventuel des études philologiques déjà publiées par une plus grande collaboration et
+                    interaction entre les usagers via une consultation libre et gratuite, d’autre part. Le projet entend notamment se démarquer des autres
+                    formules similaires, telles que la base RABELAIS ou le laboratoire Chrétien de Troyes sur le Web, par une démocratisation de l'édition
+                    critique au grand public, se concrétisant grâce à une architecture de l’information centrée sur les besoins des utilisateurs en termes
+                    d’efficacité et d’agréabilité, entre autres.
+                </p>
+            </projectDesc>
+            <editorialDecl>
+                <correction method="markup">
+                    <p>Les erreurs orthographiques et les fautes dactylographiques parmi les plus manifestes ont été corrigées.</p>
+                </correction>
+                <normalization>
+                    <p>
+                        L'édition numérique des textes s'applique à :
+                        <list>
+                            <item>la représentation graphique du caractère latin « s long » et de la ligature « &amp; »;</item>
+                            <item>la conservation des majuscules, dont l'irrégularité dans l'écriture est une particularité naturelle du moyen français;</item>
+                            <item>la dissimilation des variantes graphiques u/v et i/j, consonnes confondues jusqu'à la Renaissance du fait qu'elles soient absentes du latin;</item>
+                            <item>l'assouplissement des abréviations, notamment des tildes tels que ã (an ou am);</item>
+                            <item>l'agglutination des mots séparés (ce pendant/cependant);</item>
+                            <item>la division des mots agglutinés (dixmille/dix mille).</item>
+                        </list>
+                    </p>
+                </normalization>
+                <segmentation>
+                    <p>La transcription de chaque page n'inclut ni leur titre courant ni leur numéro et leur signature puisque seule l'oeuvre littéraire, abstraite de l'ensemble du recueil, est ciblée ici.</p>
+                </segmentation>
+                <punctuation>
+                    <p>La ponctuation originale a été sauvegardée.</p>
+                </punctuation>
+                <quotation>
+                    <p>Les marques de citations respectent celle de l'édition originale.</p>
+                </quotation>
+                <hyphenation>
+                    <p>La division des lignes respecte celle de l'édition originale.</p>
+                </hyphenation>
+                <interpretation>
+                    <p>Un glossaire explicite le sens vieilli ou perdu de mots et d'expressions, puis des notes renseignent sur des références historiques implicitement évoquée et sur
+                        chaque personnalités et noms présents dans le texte.</p>
+                </interpretation>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <pb n="1"/>
+        <front>
+            <titlePart>
+                <figure xml:id="section-1">
+                    <graphic url="../images/photos/photo-1.png"/>
+                </figure>
+                LE THEATRE<lb/>
+                DE NEPT<choice><orig>V</orig><reg>U</reg></choice>NE EN LA<lb/>
+                NO<choice><orig>V</orig><reg>U</reg></choice>VELLE-FRANCE.
+            </titlePart>
+            <p>
+                <figure xml:id="section-2">
+                    <graphic url="../images/photos/photo-2.png"/>
+                </figure>
+                <seg><term>Repre&s-long;enté</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/The_First_Play_in_Canada%2C_1606.JPG/800px-The_First_Play_in_Canada%2C_1606.JPG">La pièce théâtrale fut écrite afin de célébrer le retour de Jean de Poutrincourt et de Samuel de Champlain d'une expédition vers le cap Cod.</desc></seg>&nbsp;&s-long;ur les flots du <seg><term>Port Royal</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/PortRoyalAcadia1702.jpg/1024px-PortRoyalAcadia1702.jpg">Habitation coloniale fondée en 1605 en Acadie.</desc></seg> le quator-<lb/>
+                <app><rdg wit="#E09 #E12 #E17 #E18">ziéme</rdg><rdg wit="#E11">zième</rdg></app> Novembre mille &s-long;ix cens &s-long;ix, au retour<lb/>
+                du <seg><term><app><rdg wit="#E09 #E11 #E12">sieur</rdg><rdg wit="#E17 #E18">Sieur</rdg></app> de Poutrincourt</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/7/78/Samuel_de_Champlain_arrive_%C3%A0_Qu%C3%A9bec_-_George_Agnew_Reid_-_1909.jpg">Fondateur de la colonie de Port-Royal en Nouvelle-France.</desc></seg> du <seg><term>païs des Armou-<lb/>
+                chiquois</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Description_of_the_Coasts%2C_Points%2C_Harbours_and_Islands_of_New_France_WDL280.png/1024px-Description_of_the_Coasts%2C_Points%2C_Harbours_and_Islands_of_New_France_WDL280.png">Région de la Nouvelle-Angleterre située au Sud de la rivière Saco et au Nord du cap Cod.</desc></seg>.
+            </p>
+        </front>
+        <body>
+            <stage>
+                <figure xml:id="section-3">
+                    <graphic url="../images/photos/photo-3.png"/>
+                </figure>
+                <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> commence <app><rdg wit="#E09 #E11 #E12">revetu</rdg><rdg wit="#E17 #E18">revétu</rdg></app> d&apos;<choice><orig>v</orig><reg>u</reg></choice>n voile de couleur<lb/>
+                bleuë, &amp; de brodequins, ayant la chevelure &amp; la barbe<lb/>
+                longues &amp; chenuës, tenant &s-long;on Trident en main,<lb/>
+                a&s-long;&s-long;is &s-long;ur &s-long;on chariot paré de &s-long;es couleurs : ledit cha-<lb/>
+                riot trainé &s-long;ur les ondes par &s-long;ix <seg><term>Tritons</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Herakles_Triton_BM_GR1947-7-14-16.jpg/800px-Herakles_Triton_BM_GR1947-7-14-16.jpg">Figures mythologiques de la mer.</desc></seg> ju&s-long;ques à<lb/>
+                l&apos;abord de la chaloupe où s&apos;e&s-long;toit mis ledit <seg><term>Sieur de<lb/>
+                Poutrincourt</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/7/78/Samuel_de_Champlain_arrive_%C3%A0_Qu%C3%A9bec_-_George_Agnew_Reid_-_1909.jpg">Fondateur de la colonie de Port-Royal en Nouvelle-France.</desc></seg> &amp; &s-long;es gens &s-long;ortant de la barque pour<lb/>
+                venir à terre. Lors ladite chaloupe accrochée, Ne-<lb/>
+                ptune commence ain&s-long;i.
+            </stage>
+            <sp>
+                <speaker rend="center">NEPT<choice><orig>V</orig><reg>U</reg></choice>NE.</speaker>
+                <lg>
+                    <figure xml:id="section-4">
+                        <graphic url="../images/photos/photo-4.png"/>
+                    </figure>
+                    <l><hi rend="normal"><c rend="initial">A</c>RRETE, Sagamos</hi>, &#42;
+                        <note place="right">
+                            &#42; C'e&s-long;t <choice><orig>v</orig><reg>u</reg></choice>n<lb/>
+                            mot de<lb/>
+                            <seg><term>Sauvage</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg>,<lb/>
+                            qui &s-long;igni-<lb/>
+                            fie Capi-<lb/>
+                            taine.
+                        </note>
+                        arréte toy ici,</l>
+                    <l>Et <app><rdg wit="#E09 #E12">écoutes</rdg><rdg wit="#E11 #E17 #E18">regardes</rdg></app>&nbsp;<choice><orig>v</orig><reg>u</reg></choice>n Dieu qui a de toy &s-long;ouci.</l>
+                    <l>Si tu ne me conois, <seg><term>Saturne</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/0_Autel_d%C3%A9di%C3%A9_au_dieu_Malakb%C3%AAl_et_aux_dieux_de_Palmyra_-_Musei_Capitolini_%281b%29.JPG/1024px-0_Autel_d%C3%A9di%C3%A9_au_dieu_Malakb%C3%AAl_et_aux_dieux_de_Palmyra_-_Musei_Capitolini_%281b%29.JPG">Dieu romain du ciel présidant le solstice d'hiver.</desc></seg> fut mon pere,</l>
+                    <l><choice><orig>I</orig><reg>J</reg></choice>e &s-long;uis de <seg><term><choice><orig>Iupiter</orig><reg>Jupiter</reg></choice></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jupiter-P9020602-gradient.jpg/800px-Jupiter-P9020602-gradient.jpg">Dieu romain qui gouverne la terre et le ciel, ainsi que tous les êtres vivants s'y trouvant.</desc></seg> &amp; de <seg><term>Pluton</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pluton_Chapu_chateaudeChantilly.jpg/800px-Pluton_Chapu_chateaudeChantilly.jpg">Dieu romain des morts.</desc></seg> le frere.</l>
+                </lg>
+                <pb n="2"/>
+                <lg>
+                    <figure xml:id="section-5">
+                        <graphic url="../images/photos/photo-5.png"/>
+                    </figure>
+                    <l>Entre nous trois jadis fut <gloss corresp="gloss-1">parti</gloss> l&apos;<choice><orig>Vnivers</orig><reg>Univers</reg></choice><app><rdg wit="#E09">;</rdg><rdg wit="#E11 #E12 #E17 #E18">,</rdg></app></l>
+                    <l><seg><term><choice><orig>Iupiter</orig><reg>Jupiter</reg></choice></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jupiter-P9020602-gradient.jpg/800px-Jupiter-P9020602-gradient.jpg">Dieu romain qui gouverne la terre et le ciel, ainsi que tous les êtres vivants s'y trouvant.</desc></seg> eut le ciel, <seg><term>Pluton</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pluton_Chapu_chateaudeChantilly.jpg/800px-Pluton_Chapu_chateaudeChantilly.jpg">Dieu romain des morts.</desc></seg> eut les <app><rdg wit="#E09">enfers</rdg><rdg wit="#E11 #E12 #E17 #E18">Enfers</rdg></app></l>
+                    <l>Et moy plus hazardeux eu la mer en partage,</l>
+                    <l>Et le gouvernement de ce <gloss corresp="gloss-2">moite</gloss> heritage.</l>
+                    <l><seg><term><hi rend="normal"><choice><orig><c rend="larger">N</c>EPTVNE</orig><reg><c rend="larger">N</c>EPTUNE</reg></choice></hi></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> c&apos;e&s-long;t <app><rdg wit="#E09"><choice><orig>m&#245;</orig><reg>mon</reg></choice></rdg><rdg wit="#E11 #E12 #E17 #E18">mon</rdg></app> nom, <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> l&apos;<choice><orig>vn</orig><reg>un</reg></choice> des Dieux</l>
+                    <l>Qui a plus de pouvoir &s-long;ouz la voute des cieux.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-6">
+                        <graphic url="../images/photos/photo-6.png"/>
+                    </figure>
+                    <l>Si l&apos;homme veut avoir <choice><orig>vne</orig><reg>une</reg></choice> heureu&s-long;e fortune</l>
+                    <l>Il lui faut implorer le &s-long;ecours de <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg>.</l>
+                    <l>Car celui qui chez &s-long;oy demeure cazanier</l>
+                    <l>Merite &s-long;eulement le nom de cui&s-long;inier.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-7">
+                        <graphic url="../images/photos/photo-7.png"/>
+                    </figure>
+                    <l><choice><orig>Ie</orig><reg>Je</reg></choice> fay que le <app><rdg wit="#E09 #E17 #E18">Flamen</rdg><rdg wit="#E11 #E12">Flameng</rdg></app> en peu de temps chemine</l>
+                    <l>Au&s-long;si-tot que le vent <choice><orig>iu&#383;ques</orig><reg>jusques</reg></choice> dedans la Chine.</l>
+                    <l><choice><sic>Ie</sic><corr>Le</corr></choice> fay que l&apos;homme peut, porté de&s-long;&s-long;us mes eaux,</l>
+                    <l>D&apos;<choice><orig>vn</orig><reg>un</reg></choice> autre pole voir les <app><rdg wit="#E09">inconeuz</rdg><rdg wit="#E11 #E12 #E17 #E18">inconuz</rdg></app> flambeaux,</l>
+                    <l>Et les bornes franchir de la <seg><term>zone torride</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/e/e4/Wendekreise.png">Zone géographique entre les deux tropiques.</desc></seg>,</l>
+                    <l>Où bouïllonnent les flots de l&apos;element liquide.</l>
+                    <l>Sans moy le Roy François d&apos;<choice><orig>vn</orig><reg>un</reg></choice>&nbsp;<seg><term>&s-long;uperbe elephant</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Elephant_and_Castle_%28Fresco_in_San_Baudelio%2C_Spain%29.jpg/800px-Elephant_and_Castle_%28Fresco_in_San_Baudelio%2C_Spain%29.jpg">Allusion à Abul-Abbas, spécimen rare d'éléphant blanc, qui a été offert en cadeau diplomatique à Charlemagne par le calife abbasside Hâroun ar-Rachîd.</desc></seg></l>
+                    <note place="left">
+                        <seg>
+                            <term>
+                                <app>
+                                    <rdg wit="#E09 #E11 #E12"><hi rend="normal">[Charle-<lb/>magne.]</hi></rdg>
+                                    <rdg wit="#E17 #E18"><hi rend="normal">Charle-<lb/>magne.</hi></rdg>
+                                </app>
+                            </term>
+                            <desc synch="https://upload.wikimedia.org/wikipedia/commons/6/6a/Einhard_vita-karoli_13th-cent.jpg">
+                                Roi des Francs appartenant à la dynastie carolingienne de 768 à 814.
+                            </desc>
+                        </seg>
+                    </note>
+                    <l>N&apos;eu&s-long;t du Per&s-long;an receu le pre&s-long;ent <choice><orig>trivmphant</orig><reg>triumphant</reg></choice> :</l>
+                    <l>Et encores &s-long;ans moy <gloss corresp="gloss-3">onc</gloss> les François gendarmes</l>
+                    <l><gloss corresp="gloss-4">Es</gloss>&nbsp;<choice><sic>terre</sic><corr>terres</corr></choice> du <seg><term>Levant</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/c/c1/Modern_Levant.PNG">Région qui désigne l'ensemble des contrées du Proche-Orient et du Moyen-Orient.</desc></seg> n&apos;eu&s-long;&s-long;ent <app><rdg wit="#E09 #E12 #E17 #E18">planté</rdg><rdg wit="#E11" ana="exception ici">plantê; E18 : porté</rdg></app> leurs armes.</l>
+                    <l>Sans moy le Portugais hazardeux &s-long;ur mes flots</l>
+                    <l>Sans renom croupiroit dans &s-long;es rives enclos,</l>
+                    <l>Et n&apos;auroit enlevé les beautez de l&apos;Aurore</l>
+                    <l>Que le monde en&s-long;en&s-long;é folatrement adore.</l>
+                    <l>Bref &s-long;ans moy le marchant, pilote, marinier</l>
+                    <l>Seroit en &s-long;a mai&s-long;on comme dans <choice><orig>vn</orig><reg>un</reg></choice> panier</l>
+                    <l>Sans <app><rdg wit="#E09">à peine</rdg><rdg wit="#E11 #E12 #E17 #E18">à-peine</rdg></app> pouvoir &s-long;ortir de &s-long;a province.</l>
+                    <l><choice><orig>Vn</orig><reg>Un</reg></choice> Prince ne pourroit &s-long;ecourir l&apos;autre Prince</l>
+                    <l>Que j&apos;auroy &s-long;eparé de mes profondes eaux.</l>
+                    <l>Et toy-même &s-long;ans moy apres tant d&apos;actes beaux</l>
+                    <l>Que tu as <choice><sic>exploité</sic><corr>exploités</corr></choice> en la <seg><term>Françoise guerre</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/La_masacre_de_San_Bartolom%C3%A9%2C_por_Fran%C3%A7ois_Dubois.jpg/1280px-La_masacre_de_San_Bartolom%C3%A9%2C_por_Fran%C3%A7ois_Dubois.jpg">Huitième guerre de Religion de 1585 à 1598, où Jean de Pourtrincourt s'est illustré lors du siège de Paris.</desc></seg>,</l>
+                    <l>N'eu&s-long;&s-long;es eu le plai&s-long;ir d&apos;aborder cette terre.</l>
+                </lg>
+                <pb n="3"/>
+                <lg>
+                    <figure xml:id="section-8">
+                        <graphic url="../images/photos/photo-8.png"/>
+                    </figure>
+                    <l>C&apos;e&s-long;t moy qui &s-long;ur mon dos ay tes vai&s-long;&s-long;eaux porté</l>
+                    <l>Quand de me vi&s-long;iter tu as eu volonté.</l>
+                    <l>Et nagueres encor c&apos;e&s-long;t moy qui de la <seg><term>Parque</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ca%27_Rezzonico_-_Le_tre_Parche_%28Inv.268%29_-_Bacchiacca.jpg/800px-Ca%27_Rezzonico_-_Le_tre_Parche_%28Inv.268%29_-_Bacchiacca.jpg">Déesse de la mythologie romaine représentée comme une fileuse contrôlant la vie des hommes.</desc></seg></l>
+                    <l>Ay cent fois garenti toy, les tiens &amp; ta barque.</l>
+                    <l>Ain&s-long;i <choice><orig>ie</orig><reg>je</reg></choice> veux toujours &s-long;econder tes de&s-long;&s-long;eins,</l>
+                    <l>Ain&s-long;i <choice><orig>ie</orig><reg>je</reg></choice> ne veux point que tes effortz &s-long;oient vains,</l>
+                    <l>Puis que &s-long;i con&s-long;tamment tu as eu le courage</l>
+                    <l>De venir de &s-long;i loin rechercher ce rivage,</l>
+                    <l>Pour établir ici <choice><orig>vn</orig><reg>un</reg></choice> Royaume François,</l>
+                    <l>Et y faire garder mes &s-long;tatuts &amp; mes loix.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-9">
+                        <graphic url="../images/photos/photo-9.png"/>
+                    </figure>
+                    <l>Par mon &s-long;acré Trident, par mon &s-long;ceptre <choice><orig>ie</orig><reg>je</reg></choice> jure</l>
+                    <l>Que de favori&s-long;er ton projet <choice><orig>i</orig><reg>j</reg></choice>&apos;auray <gloss corresp="gloss-5">cure</gloss>,</l>
+                    <l>Et <gloss corresp="gloss-6">oncques</gloss>&nbsp;<choice><orig>ie</orig><reg>je</reg></choice> n&apos;auray en moy-méme repos</l>
+                    <l>Qu&apos;en tout cet environ <choice><orig>ie</orig><reg>je</reg></choice> ne voye mes flots</l>
+                    <l><gloss corresp="gloss-7"><app><rdg wit="#E09">A hanner</rdg><rdg wit="#E11 #E12 #E17 #E18">Ahanner</rdg></app></gloss>&nbsp;&s-long;ouz le <gloss corresp="gloss-8">faix</gloss> de dix <choice><sic>milles</sic><corr>mille</corr></choice> navires</l>
+                    <l>Qui facent d&apos;<choice><orig>vn</orig><reg>un</reg></choice> clin d&apos;oeil tout ce que tu de&s-long;ires.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-10">
+                        <graphic url="../images/photos/photo-10.png"/>
+                    </figure>
+                    <l>Va donc heureu&s-long;ement, &amp; pour&s-long;ui ton chemin</l>
+                    <l>Où le &s-long;ort te conduit : car <choice><orig>ie</orig><reg>je</reg></choice> voy le de&s-long;tin</l>
+                    <l>Preparer à la France <choice><orig>vn</orig><reg>un</reg></choice> flori&s-long;&s-long;ant Empire</l>
+                    <l>En ce monde nouveau, qui bien loin fera bruire</l>
+                    <l>Le renom immortel de <seg><term>De Monts</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Monument_de_Pierre_Du_Gua_de_Monts_06.jpg/800px-Monument_de_Pierre_Du_Gua_de_Monts_06.jpg">Pierre Dugua de Mons, premier colonisateur de la Nouvelle-France et fondateur de Port-Royal.</desc></seg> &amp; de toy</l>
+                    <l>Souz le regne pui&s-long;&s-long;ant de <seg><term><c rend="larger">H</c>ENRY</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/d/da/King_Henry_IV_of_France.jpg">Henri IV, roi de France de 1589 à 1610.</desc></seg> vôtre Roy.</l>
+                </lg>
+            </sp>
+            <stage>
+                <figure xml:id="section-11">
+                    <graphic url="../images/photos/photo-11.png"/>
+                </figure>
+                <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> ayant achevé, <choice><orig>vne</orig><reg>une</reg></choice> trompete com-<lb/>
+                mence à éclater hautement &amp; encourager les<lb/>
+                <seg><term>Tritons</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Herakles_Triton_BM_GR1947-7-14-16.jpg/800px-Herakles_Triton_BM_GR1947-7-14-16.jpg">Figures mythologiques de la mer.</desc></seg> à faire de méme. <choice><orig>Ce pendant</orig><reg>Cependant</reg></choice> le <seg><term>&s-long;ieur<lb/>
+                de Poutrincourt</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/7/78/Samuel_de_Champlain_arrive_%C3%A0_Qu%C3%A9bec_-_George_Agnew_Reid_-_1909.jpg">Fondateur de la colonie de Port-Royal en Nouvelle-France.</desc></seg> tenoit &s-long;on epée en main, la-<lb/>
+                quelle il ne remit point au fourreau ju&s-long;ques à<lb/>
+                ce que les <seg><term>Tritons</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Herakles_Triton_BM_GR1947-7-14-16.jpg/800px-Herakles_Triton_BM_GR1947-7-14-16.jpg">Figures mythologiques de la mer.</desc></seg> eurent prononcé comme s&apos;en&s-long;uit.
+            </stage>
+            <sp>
+                <speaker rend="center">PREMIER TRITON.</speaker>
+                <lg>
+                    <figure xml:id="section-12">
+                        <graphic url="../images/photos/photo-12.png"/>
+                    </figure>
+                    <l>Tu peux <view>(<app><rdg wit="#E09 #E11 #E12"><choice><orig>gr&#227;d</orig><reg>grand</reg></choice></rdg><rdg wit="#E17 #E18">grand</rdg></app>&nbsp;<hi rend="normal">Sagamos</hi>)</view> tu peux te dire heureux</l>
+                    <l><choice><orig>Puis qu</orig><reg>Puisqu</reg></choice>&apos;<choice><orig>vn</orig><reg>un</reg></choice> Dieu te promet favorable <app><rdg wit="#E09 #E17 #E18">a&s-long;si&s-long;tence</rdg><rdg wit="#E11 #E12">a&s-long;si&s-long;tance</rdg></app></l>
+                </lg>
+                <pb n="4"/>
+                <lg>
+                    <figure xml:id="section-13">
+                        <graphic url="../images/photos/photo-13.png"/>
+                    </figure>
+                    <l>En l&apos;affaire important que d&apos;<choice><orig>vn</orig><reg>un</reg></choice> coeur vigoureux</l>
+                    <l>Hardi tu entreprens, forçant la violence</l>
+                    <l>D&apos;<seg><term><choice><orig>&#198;ole</orig><reg>Éole</reg></choice></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/9/99/Aeolus1.jpg">Dieu de la mythologie grecque régissant les vents.</desc></seg>, qui toujours incon&s-long;tant &amp; leger,</l>
+                    <l>Tantot <hi rend="normal">ade&s-long;quidés</hi>, &#8224; tantot pou&s-long;&s-long;é d&apos;envie,</l>
+                    <note place="left">
+                        &#8224; Mot de<lb/>
+                        <seg><term>Sauvage</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg><app><rdg wit="#E09 #E12 #E17">,</rdg><rdg wit="#E11 #E18"></rdg></app><lb/>
+                        qui &s-long;igni-<lb/>
+                        fie Ami.
+                    </note>
+                    <l>Veut te precipiter, &amp; les tiens<app><rdg wit="#E09">,</rdg><rdg wit="#E11 #E12 #E17 #E18"></rdg></app> au danger.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-14">
+                        <graphic url="../images/photos/photo-14.png"/>
+                    </figure>
+                    <l><seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> e&s-long;t <choice><orig>vn</orig><reg>un</reg></choice> grand Dieu, qui cette <choice><orig>ialou&#383;ie</orig><reg>jalousie</reg></choice></l>
+                    <l>Fera comme fumée en l&apos;air évanouïr<app><rdg wit="#E09">;</rdg><rdg wit="#E11 #E12 #E17 #E18"> :</rdg></app></l>
+                    <l>Et nous &s-long;es po&s-long;tillons, <app><rdg wit="#E09">malgrè</rdg><rdg wit="#E11 #E12 #E17 #E18">malgré</rdg></app> l&apos;effort d&apos;<seg><term><choice><orig>&#198;ole</orig><reg>Éole</reg></choice></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/9/99/Aeolus1.jpg">Dieu de la mythologie grecque régissant les vents.</desc></seg></l>
+                    <l>Ferons en toutes parts de ton courage ouïr</l>
+                    <l>Le renom, qui <app><rdg wit="#E09">desja</rdg><rdg wit="#E11 #E12 #E17 #E18">des-ja</rdg></app> en toutes terres vole.</l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center"><choice><orig>DEVXIEME</orig><reg>DEUXIEME</reg></choice> TRITON.</speaker>
+                <lg>
+                    <figure xml:id="section-15">
+                        <graphic url="../images/photos/photo-15.png"/>
+                    </figure>
+                    <l>Si <seg><term><choice><orig>Iupiter</orig><reg>Jupiter</reg></choice></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jupiter-P9020602-gradient.jpg/800px-Jupiter-P9020602-gradient.jpg">Dieu romain qui gouverne la terre et le ciel, ainsi que tous les êtres vivants s'y trouvant.</desc></seg> e&s-long;t Roy <gloss corresp="gloss-4">és</gloss> cieux</l>
+                    <l>Pour gouverner <gloss corresp="gloss-9">ça</gloss> bas les hommes,</l>
+                    <l><seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> au&s-long;si l&apos;e&s-long;t en ces lieux</l>
+                    <l>Pour méme effect; &amp; nous qui &s-long;ommes<app><rdg wit="#E09 #E11 #E12 #E17">,</rdg><rdg wit="#E18"></rdg></app></l>
+                    <l>Ses <app><rdg wit="#E09">&s-long;uppo&s-long;ts</rdg><rdg wit="#E11 #E12 #E17 #E18">&s-long;uppos</rdg></app>, avons grand de&s-long;ir</l>
+                    <l>De voir le temps &amp; la <choice><orig>iournée</orig><reg>journée</reg></choice></l>
+                    <l>Qu&apos;ayes de tes travaux plai&s-long;ir</l>
+                    <l>Apres ta cour&s-long;e terminée,</l>
+                    <l>Afin qu&apos;en ces côtes ici</l>
+                    <l>Bien-tot retenti&s-long;&s-long;e la gloire</l>
+                    <l>Du pui&s-long;&s-long;ant <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> : &amp; qu&apos;ain&s-long;i</l>
+                    <l>Tu eterni&s-long;es ta memoire.</l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center">TROISIEME TRITON.</speaker>
+                <lg>
+                    <figure xml:id="section-16">
+                        <graphic url="../images/photos/photo-16.png"/>
+                    </figure>
+                    <l>France, tu as occa&s-long;ion</l>
+                    <l>De loüer la devotion</l>
+                    <l>De tes enfans dont le courage</l>
+                    <l>Se montre plus grand en cet âge</l>
+                    <l>Qu&apos;il ne fit <gloss corresp="gloss-3">onc</gloss>&nbsp;<gloss corresp="gloss-4">és</gloss>&nbsp;&s-long;iecles vieux,</l>
+                    <l>E&s-long;tans ardemment curieux</l>
+                    <l>De faire éclater tes loüanges</l>
+                    <l><choice><orig>Iu&#383;ques</orig><reg>Jusques</reg></choice> aux peuples plus étranges,</l>
+                </lg>
+                <pb n="5"/>
+                <lg>
+                    <figure xml:id="section-17">
+                        <graphic url="../images/photos/photo-17.png"/>
+                    </figure>
+                    <l>Et graver ton <gloss corresp="gloss-10">los</gloss> immortel</l>
+                    <l>Méme &s-long;ouz ce monde mortel.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-18">
+                        <graphic url="../images/photos/photo-18.png"/>
+                    </figure>
+                    <l><app><rdg wit="#E09">Aide</rdg><rdg wit="#E11 #E12 #E17 #E18">Ayde</rdg></app>&nbsp;<gloss corresp="gloss-11">doncques</gloss> &amp; favori&s-long;e</l>
+                    <l><choice><orig>Vne</orig><reg>Une</reg></choice>&nbsp;&s-long;i loüable entrepri&s-long;e,</l>
+                    <l><seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> s&apos;offre à ton &s-long;ecours</l>
+                    <l>Qui les tiens maintiendra toujours</l>
+                    <l>Contre toute l&apos;humaine force,</l>
+                    <l>Si quelqu&apos;<choice><orig>vn</orig><reg>un</reg></choice> contre toy s&apos;efforce.</l>
+                    <l><q>Il ne faut jamais rejetter</q></l>
+                    <l><q>Le bien qu'<choice><orig>vn</orig><reg>un</reg></choice> Dieu nous veut preter.</q></l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center"><choice><orig>QVATRIEME</orig><reg>QUATRIEME</reg></choice> TRITON.</speaker>
+                <lg>
+                    <figure xml:id="section-19">
+                        <graphic url="../images/photos/photo-19.png"/>
+                    </figure>
+                    <l>Celui qui point ne &s-long;e hazarde</l>
+                    <l>Montre qu&apos;il a l&apos;ame coüarde<app><rdg wit="#E09 #E11 #E12">,</rdg><rdg wit="#E17 #E18">.</rdg></app></l>
+                    <l>Mais celui qui d&apos;<choice><orig>vn</orig><reg>un</reg></choice> brave coeur</l>
+                    <l>Mépri&s-long;e des flots la fureur</l>
+                    <l>Pour <choice><orig>vn</orig><reg>un</reg></choice>&nbsp;&s-long;ujet rempli de gloire</l>
+                    <l>Fait à chacun ai&s-long;ément croire</l>
+                    <l>Que de courage &amp; de vertu<app><rdg wit="#E09 #E17 #E18"></rdg><rdg wit="#E17 #E18">,</rdg></app></l>
+                    <l>Il e&s-long;t tout ceint &amp; revetu,</l>
+                    <l>Et qu&apos;il ne veut que le &s-long;ilence</l>
+                    <l>Tienne &s-long;on nom en oubliance.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-20">
+                        <graphic url="../images/photos/photo-20.png"/>
+                    </figure>
+                    <l>Ain&s-long;i ton nom <view>(grand <hi rend="normal">Sagamos</hi>)</view></l>
+                    <l>Retentira de&s-long;&s-long;us les flots</l>
+                    <l><app><rdg wit="#E09 #E17 #E18">D&apos;or-en-avant</rdg><rdg wit="#E11 #E12">D&apos;or-en-vant</rdg></app>, quand de&s-long;&s-long;us l&apos;onde</l>
+                    <l>Tu découvres ce nouveau monde,</l>
+                    <l>Et y plantes le nom François,</l>
+                    <l>Et la Maje&s-long;té de tes Rois.</l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center"><choice><orig>CINQVIEME</orig><reg>CINQUIEME</reg></choice> TRITON.</speaker>
+                <stage>
+                    <figure xml:id="section-21">
+                        <graphic url="../images/photos/photo-21.png"/>
+                    </figure>
+                    <choice><orig>Vn</orig><reg>Un</reg></choice> Ga&s-long;con prononça ces vers à peu<lb/>
+                    <app><rdg wit="#E09 #E12">pré</rdg><rdg wit="#E11 #E17 #E18">prés</rdg></app> en &s-long;a langue.<lb/>
+                </stage>
+                <lg>
+                    <figure xml:id="section-22">
+                        <graphic url="../images/photos/photo-22.png"/>
+                    </figure>
+                    <l>Sabets aquo que volio diro,</l>
+                    <l>Aque&s-long;te <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> bieillart</l>
+                </lg>
+                <pb n="6"/>
+                <lg>
+                    <figure xml:id="section-23">
+                        <graphic url="../images/photos/photo-23.png"/>
+                    </figure>
+                    <l>L&apos;autre jou fai&s-long;io del bragart,</l>
+                    <l>Et comme <choice><orig>vn</orig><reg>un</reg></choice> bergalant &s-long;e miro.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-24">
+                        <graphic url="../images/photos/photo-24.png"/>
+                    </figure>
+                    <l>N&apos;agaires que fai&s-long;io l&apos;amou,</l>
+                    <l>Et bai&s-long;avo <choice><orig>vne</orig><reg>une</reg></choice> jeune hillo</l>
+                    <l>Qu&apos;ero plan polide &amp; gentillo,</l>
+                    <l>Et la cerquavo quadejou.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-25">
+                        <graphic url="../images/photos/photo-25.png"/>
+                    </figure>
+                    <l>Bezets, ne vous fizets pas trop</l>
+                    <l>En aquels gens de barbos gri&s-long;os,</l>
+                    <l>Car en <app><rdg wit="#E09">aquelos</rdg><rdg wit="#E11 #E12 #E17 #E18">aqueles</rdg></app> entrepri&s-long;os</l>
+                    <l>Els ban lou trot &amp; lou galop.</l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center">SIXIEME TRITON.</speaker>
+                <lg>
+                    <figure xml:id="section-26">
+                        <graphic url="../images/photos/photo-26.png"/>
+                    </figure>
+                    <l>Vive <seg><term><hi rend="normal"><c rend="larger">H</c>ENRI</hi></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/d/da/King_Henry_IV_of_France.jpg">Henri IV, roi de France de 1589 à 1610.</desc></seg> le grand Roy des François</l>
+                    <l>Qui maintenant fait vivre &s-long;ouz &s-long;es loix</l>
+                    <l>Les nations de &s-long;a Nouvelle-France,</l>
+                    <l>Et &s-long;ouz lequel nous avons e&s-long;perance</l>
+                    <l>De voir bien-tot <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> reveré</l>
+                    <l>Autant ici qu&apos;<app><rdg wit="#E09"><gloss corresp="gloss-3">onq</gloss></rdg><rdg wit="#E11 #E12 #E17 #E18"><gloss corresp="gloss-3">oncq</gloss></rdg></app>&apos;il fut honoré</l>
+                    <l>Par &s-long;es &s-long;ujets &s-long;ur le <seg><term>Gaullois rivage</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/1/1b/Droysens_Hist_Handatlas_S16_Gallien_CAESAR.png">Côtes atlantiques de la France.</desc></seg>,</l>
+                    <l>Et en tous lieux où le brave courage</l>
+                    <l>De leurs ayeuls jadis les a porté.</l>
+                    <l><seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> an&s-long;si fera de &s-long;on côté</l>
+                    <l>Que leurs neveux s&apos;employans &s-long;ans feinti&s-long;e</l>
+                    <l>A l'ornement de leur belle entrepri&s-long;e<app><rdg wit="#E09 #E12 #E17">,</rdg><rdg wit="#E11 #E18"></rdg></app></l>
+                    <l>Tous leurs de&s-long;&s-long;eins il favori&s-long;era,</l>
+                    <l>Et pro&s-long;perer &s-long;ur &s-long;es eaux il fera.</l>
+                </lg>
+            </sp>
+            <stage>
+                <figure xml:id="section-27">
+                    <graphic url="../images/photos/photo-27.png"/>
+                </figure>
+                Cela fait, <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> s&apos;équarte <choice><orig>vn</orig><reg>un</reg></choice> petit pour<lb/>
+                faire place à <choice><orig>vn</orig><reg>un</reg></choice> canot, dans lequel e&s-long;toient<lb/>
+                quatre <seg><term>Sauvages</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg>, qui s&apos;approcherent appor-<lb/>
+                tans chacun <choice><orig>vn</orig><reg>un</reg></choice> pre&s-long;ent audit <seg><term>&s-long;ieur de Pou-<lb/>
+                trincourt</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/7/78/Samuel_de_Champlain_arrive_%C3%A0_Qu%C3%A9bec_-_George_Agnew_Reid_-_1909.jpg">Fondateur de la colonie de Port-Royal en Nouvelle-France.</desc></seg>.
+            </stage>
+            <sp>
+                <speaker rend="center">PREMIER <choice><orig>SAVVAGE</orig><reg>SAUVAGE</reg></choice>.</speaker>
+                <stage>
+                    <figure xml:id="section-28">
+                        <graphic url="../images/photos/photo-28.png"/>
+                    </figure>
+                    Le premier Sauvage offre <choice><orig>vn</orig><reg>un</reg></choice>&nbsp;<choice><sic>quarrier</sic><corr>quartier</corr></choice> d&apos;Ellan<app><rdg wit="#E09">,</rdg><rdg wit="#E11 #E12 #E17 #E18"></rdg></app><lb/>
+                    ou Orignac, di&s-long;ant ain&s-long;i.
+                </stage>
+                <pb n="7"/>
+                <lg>
+                    <figure xml:id="section-29">
+                        <graphic url="../images/photos/photo-29.png"/>
+                    </figure>
+                    <l>De la part des peuples <seg><term>Sauvages</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg></l>
+                    <l>Qui environnent ces païs</l>
+                    <l>Nous venons rendre les homages</l>
+                    <l>Deuz aux &s-long;acrées Fleur-de-lis</l>
+                    <l><gloss corresp="gloss-4">Es</gloss> mains de toy, qui de ton Prince</l>
+                    <l>Repre&s-long;entes la Majesté,</l>
+                    <l>Attendans que cette province</l>
+                    <l>Faces florir en pieté,</l>
+                    <l>En moeurs civils, &amp; toute cho&s-long;e</l>
+                    <l>Qui &s-long;ert à l&apos;etabli&s-long;&s-long;ement</l>
+                    <l>De ce qui e&s-long;t beau, &amp; repo&s-long;e</l>
+                    <l>En <choice><orig>vn</orig><reg>un</reg></choice> Royal gouvernement.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-30">
+                        <graphic url="../images/photos/photo-30.png"/>
+                    </figure>
+                    <l><hi rend="normal">Sagamos</hi>, &s-long;i en <app><rdg wit="#E09">noz</rdg><rdg wit="#E11 #E12 #E17 #E18">nos</rdg></app>&nbsp;&s-long;ervices</l>
+                    <l>Tu as quelque devotion,</l>
+                    <l>A toy en fai&s-long;ons &s-long;acrifices</l>
+                    <l>Et à ta generation.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-31">
+                        <graphic url="../images/photos/photo-31.png"/>
+                    </figure>
+                    <l>Noz moyens &s-long;ont <choice><orig>vn</orig><reg>un</reg></choice> peu de cha&s-long;&s-long;e</l>
+                    <l>Que d&apos;<choice><orig>vn</orig><reg>un</reg></choice> coeur entier nous t&apos;offrons,</l>
+                    <l>Et vivre toujours en ta grace</l>
+                    <l>C&apos;e&s-long;t tout ce que nous de&s-long;irons.</l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center"><choice><orig>DEVXIEME</orig><reg>DEUXIEME</reg></choice>&nbsp;<choice><orig>SAVVAGE</orig><reg>SAUVAGE</reg></choice>.</speaker>
+                <stage>
+                    <figure xml:id="section-32">
+                        <graphic url="../images/photos/photo-32.png"/>
+                    </figure>
+                    Le <app><rdg wit="#E09 #E12">deuziéme</rdg><rdg wit="#E11 #E17 #E18">deuzie&s-long;me</rdg></app>&nbsp;<seg><term>Sauvage</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg> tenant &s-long;on arc &amp; &s-long;a<lb/>
+                    fleche en main, donne pour &s-long;on pre&s-long;ent des<lb/>
+                    peaux de Ca&s-long;tors, di&s-long;ant :
+                </stage>
+                <lg>
+                    <figure xml:id="section-33">
+                        <graphic url="../images/photos/photo-33.png"/>
+                    </figure>
+                    <l>Voici la main, l&apos;arc, &amp; la fleche</l>
+                    <l>Qui ont fait la mortele breche</l>
+                    <l>En l&apos;animal de qui la peau</l>
+                    <l>Pourra &s-long;ervir d&apos;<choice><orig>vn</orig><reg>un</reg></choice> bon manteau</l>
+                    <l><view>(Grand <hi rend="normal">Sagamos</hi>)</view> à ta hautesse.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-34">
+                        <graphic url="../images/photos/photo-34.png"/>
+                    </figure>
+                    <l>Reçoy donc de ma petite&s-long;&s-long;e</l>
+                    <l>Cette offrande qu&apos;à ta grandeur</l>
+                    <l><choice><orig>I</orig><reg>J</reg></choice>&apos;offre du meilleur de mon coeur.</l>  
+                </lg>
+            </sp>
+            <pb n="8"/>
+            <sp>
+                <speaker rend="center">TROISIEME <choice><orig>SAVVAGE</orig><reg>SAUVAGE</reg></choice>.</speaker>
+                <stage>
+                    <figure xml:id="section-35">
+                        <graphic url="../images/photos/photo-35.png"/>
+                    </figure>
+                    Le troi&s-long;ieme <seg><term>Sauvage</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg> offre des <hi rend="italic">Matachiaz</hi>,<lb/>
+                    c&apos;e&s-long;t à dire, echarpes, &amp; bra&s-long;&s-long;elets faits de<lb/>
+                    la main de &s-long;a maitre&s-long;&s-long;e, di&s-long;ant :
+                </stage>
+                <lg>
+                    <figure xml:id="section-36">
+                        <graphic url="../images/photos/photo-36.png"/>
+                    </figure>
+                    <l>Ce n&apos;e&s-long;t &s-long;eulement en France</l>
+                    <l>Que commande <seg><term>Cupidon</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Cupidon.jpg/800px-Cupidon.jpg">Dieu romain de l'amour.</desc></seg>,</l>
+                    <l>Mais en la Nouvelle-France,</l>
+                    <l>Comme entre vous, &s-long;on <seg><term><gloss corresp="gloss-12">brandon</gloss></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/0/06/Cedrus_atlantica2.jpg">Rituel amérindien où la femme célibataire, jouïssant d'une grande liberté sexuelle, enflamme une branche de cèdre qu'elle éteint au moment de désigner un homme avec lequel elle souhaite partager son intimité.</desc></seg></l>
+                    <l>Il allume; &amp; <choice><sic>des</sic><corr>de</corr></choice>&nbsp;&s-long;es flammes</l>
+                    <l>Il rotit <app><rdg wit="#E09">nos</rdg><rdg wit="#E11 #E12 #E17 #E18">noz</rdg></app> pauvres ames,</l>
+                    <l>Et fait planter le <gloss corresp="gloss-13">bourdon</gloss>.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-37">
+                        <graphic url="../images/photos/photo-37.png"/>
+                    </figure>
+                    <l>Ma maitre&s-long;&s-long;e ayant nouvelle</l>
+                    <l>Que tu devois arriver,</l>
+                    <l>M&apos;a dit que pour l&apos;amour d&apos;elle</l>
+                    <l><choice><orig>I</orig><reg>J</reg></choice>&apos;eu&s-long;&s-long;e à te venir trouver,</l>
+                    <l>Et qu&apos;offrande <choice><orig>ie</orig><reg>je</reg></choice> te fi&s-long;&s-long;e</l>
+                    <l>De ce petit exercice</l>
+                    <l>Que &s-long;a main à &s-long;ceu <gloss corresp="gloss-14">ouvrer</gloss>.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-38">
+                        <graphic url="../images/photos/photo-38.png"/>
+                    </figure>
+                    <l>Reçoy <gloss corresp="gloss-11">doncques</gloss> d&apos;allegre&s-long;&s-long;e</l>
+                    <l>Ce pre&s-long;ent que <choice><orig>ie</orig><reg>je</reg></choice> t&apos;adre&s-long;&s-long;e</l>
+                    <l>Tout rempli de gentille&s-long;&s-long;e</l>
+                    <l>Pour l&apos;amour de ma maitre&s-long;&s-long;e</l>
+                    <l>Qui e&s-long;t <gloss corresp="gloss-15">ores</gloss> en détre&s-long;&s-long;e,</l>
+                    <l>Et n&apos;aura point de lie&s-long;&s-long;e</l>
+                    <l>Si d&apos;<choice><orig>vne</orig><reg>une</reg></choice> prompte vite&s-long;&s-long;e</l>
+                    <l><choice><orig>Ie</orig><reg>Je</reg></choice> ne lui di la care&s-long;&s-long;e</l>
+                    <l>Que m&apos;aura fait ta hautesse.</l>
+                </lg>
+            </sp>
+            <sp>
+                <speaker rend="center"><choice><orig>QVATRIEME</orig><reg>QUATRIEME</reg></choice>&nbsp;<choice><orig>SAVVAGE</orig><reg>SAUVAGE</reg></choice>.</speaker>
+                <stage>
+                    <figure xml:id="section-39">
+                        <graphic url="../images/photos/photo-39.png"/>
+                    </figure>
+                    Le quatriéme <seg><term>Sauvage</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg> n&apos;<app><rdg wit="#E09 #E12 #E17 #E18"><choice><orig>ay&#227;t</orig><reg>ayant</reg></choice></rdg><rdg wit="#E11">ayant</rdg></app> heureu&s-long;ement<lb/>
+                    cha&s-long;&s-long;é par les bois, &s-long;e pre&s-long;ente avec <choice><orig>vn</orig><reg>un</reg></choice> har-<lb/>
+                    pon en main, &amp; après &s-long;es excu&s-long;es faites, dit<lb/>
+                    qu&apos;il s&apos;en va à la péche.
+                </stage>
+                <pb n="9"/>
+                <lg>
+                    <figure xml:id="section-40">
+                        <graphic url="../images/photos/photo-40.png"/>
+                    </figure>
+                    <l><hi rend="normal"><c rend="larger">S</c>AGAMOS</hi>, pardonne moy</l>
+                    <l>Si me pre&s-long;entant à toy</l>
+                    <l>Quelque pre&s-long;ent <choice><orig>ie</orig><reg>je</reg></choice> n&apos;apporte.</l>
+                    <l>Fortune n&apos;e&s-long;t pas toujours</l>
+                    <l>Aux bons cha&s-long;&s-long;eurs favorable,</l>
+                    <l>C&apos;e&s-long;t pourquoy ayant recours</l>
+                    <l>A <choice><orig>vn</orig><reg>un</reg></choice> maitre plus traitable,</l>
+                    <l>Apres avoir maintefois</l>
+                    <l>Invoqué cette Fortune</l>
+                    <l>Bro&s-long;&s-long;ant par l&apos;<app><rdg wit="#E09 #E17 #E18">épés</rdg><rdg wit="#E11 #E12">épès</rdg></app> des bois,</l>
+                    <l><choice><orig>Ie</orig><reg>Je</reg></choice> m&apos;en vay &s-long;uivre <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg>&nbsp;<app><rdg wit="#E09 #E12 #E17 #E18">.</rdg><rdg wit="#E11">,</rdg></app></l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-41">
+                        <graphic url="../images/photos/photo-41.png"/>
+                    </figure>
+                    <l>Que <seg><term>Diane</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Scene_of_sacrifice_in_honour_of_Diana._Fresco_from_the_triclinium_of_House_of_the_Vettii_in_Pompeii.jpg/1024px-Scene_of_sacrifice_in_honour_of_Diana._Fresco_from_the_triclinium_of_House_of_the_Vettii_in_Pompeii.jpg">Déesse romaine de la chasse et du monde sauvage.</desc></seg> en &s-long;es foréts</l>
+                    <l>Ceux qu&apos;elle voudra care&s-long;&s-long;e,</l>
+                    <l><choice><orig>Ie</orig><reg>Je</reg></choice> n&apos;ay que trop de regrets</l>
+                    <l>D&apos;avoir perdu ma jeune&s-long;&s-long;e</l>
+                    <l>A la &s-long;uivre par les <gloss corresp="gloss-16">vaux</gloss>,</l>
+                    <l><app><rdg wit="#E09 #E17 #E18">Par les monts, &amp; par les plaines,</rdg><rdg wit="#E11 #E12"></rdg></app></l>
+                    <l><gloss corresp="gloss-17">Avecque</gloss> mille travaux,</l>
+                    <l><app><rdg wit="#E09 #E11 #E12">[Par les bois &amp; par les plaines,]</rdg><rdg wit="#E17 #E18">Par les bois &amp; par les plaines,</rdg></app></l>
+                    <l>Souz des e&s-long;perances vaines.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-42">
+                        <graphic url="../images/photos/photo-42.png"/>
+                    </figure>
+                    <l>Maintenant <choice><orig>ie</orig><reg>je</reg></choice> m&apos;en vay voir</l>
+                    <l>Par cette côte marine</l>
+                    <l>Si <choice><orig>ie</orig><reg>je</reg></choice> pourray point avoir</l>
+                    <l>Dequoy fournir ta cuisine :</l>
+                    <l>Et cependant &s-long;i tu as</l>
+                    <l>Quelque part en ta chaloupe</l>
+                    <l><choice><orig>Vn</orig><reg>Un</reg></choice> peu de <hi rend="normal">caraconas</hi>, &#8224;
+                        <note place="right">
+                            &#8224; C&apos;e&s-long;t du<lb/>
+                            pain.
+                        </note>
+                        </l>
+                    <l>Fournis-en-moy &amp; ma troupe.</l>
+                </lg>
+            </sp>
+            <sp>
+            <stage>
+                <figure xml:id="section-43">
+                    <graphic url="../images/photos/photo-43.png"/>
+                </figure>
+                Après que <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> eut e&s-long;té remercié par<lb/>
+                le <seg><term>&s-long;ieur de Poutrincourt</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/7/78/Samuel_de_Champlain_arrive_%C3%A0_Qu%C3%A9bec_-_George_Agnew_Reid_-_1909.jpg">Fondateur de la colonie de Port-Royal en Nouvelle-France.</desc></seg> de &s-long;es offres au bien<lb/>
+                de la France, les <seg><term>Sauvages</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg/527px-Odilon_Redon_-_Primitive_Man_%28Seated_in_Shadow%29.jpg">Désignation de ceux habitant dans la nature, c'est-à-dire loin de la civilisation.</desc></seg> le furent &s-long;embla-<lb/>
+                blement, de leur bonne volonté &amp; devotions<app><rdg wit="#E09 #E11 #E12 #E17">;</rdg><rdg wit="#E18"> :</rdg></app>
+            </stage>
+            <pb n="10"/>
+            <stage>
+                <figure xml:id="section-44">
+                    <graphic url="../images/photos/photo-44.png"/>
+                </figure>
+                &amp; invitez de venir au <seg><term>Fort Royal</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Port-Royal_Nova-Scotia_1.jpg/1024px-Port-Royal_Nova-Scotia_1.jpg">Établissement fortifié de Port-Royal.</desc></seg> prendre du<lb/>
+                <hi rend="italic">caraconas</hi>. A l&apos;in&s-long;tant la troupe de <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg><lb/>
+                chante en Mu&s-long;ique à quatre parties ce qui<lb/>
+                <choice><sic>qui</sic><corr><s rend="line-through">qui</s></corr></choice>&nbsp;<choice><sic>&#383;en&#383;uit</sic><corr>s&apos;ensuit</corr></choice> :
+            </stage>
+            <lg>
+                <figure xml:id="section-45">
+                    <graphic url="../images/photos/photo-45.png"/>
+                </figure>
+                <l>Vray <seg><term>Neptune</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sousse_neptune.jpg/800px-Sousse_neptune.jpg">Dieu d'origine latine des eaux vives et des sources, puis des mers.</desc></seg> donne nous</l>
+                <l>Contre tes flots a&s-long;&s-long;eurance,</l>
+                <l>Et fay que nous pui&s-long;sions tous</l>
+                <l><choice><orig>Vn</orig><reg>Un</reg></choice> jour nous revoir en France.</l>
+            </lg>
+            <stage>
+                <figure xml:id="section-46">
+                    <graphic url="../images/photos/photo-46.png"/>
+                </figure>
+                La Mu&s-long;ique achevée, la trompete &s-long;onne <gloss corresp="gloss-18">derechef</gloss>, &amp;<lb/>
+                chacun <app><rdg wit="#E09 #E11 #E12">prent</rdg><rdg wit="#E17 #E18">prend</rdg></app>&nbsp;&s-long;a route diver&s-long;ement : les Canons bour-<lb/>
+                donnent de toutes parts, &amp; &s-long;emble à ce <choice><orig>t&#245;nerre</orig><reg>tonnerre</reg></choice> que <seg><term>Pro-<lb/>
+                &s-long;erpine</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Beeld_van_Proserpina_op_sokkel_-_Arnhem_-_20353751_-_RCE.jpg/800px-Beeld_van_Proserpina_op_sokkel_-_Arnhem_-_20353751_-_RCE.jpg">Divinité romaine des Enfers et aussi des saisons.</desc></seg> foit en travail d&apos;enfant : ceci cau&s-long;é par la multi-<lb/>
+                plicité des Echoz que les cótaux &s-long;&apos;envoient les <choice><orig>vns</orig><reg>uns</reg></choice> aux<lb/>
+                autres, <app><rdg wit="#E09 #E17">le&s-long;quelz</rdg><rdg wit="#E11 #E12 #E18">le&s-long;quels</rdg></app> durent plus d&apos;<choice><orig>vn</orig><reg>un</reg></choice> quart d&apos;heure.
+            </stage>
+            <stage>
+                <figure xml:id="section-47">
+                    <graphic url="../images/photos/photo-47.png"/>
+                </figure>
+                Le <seg><term>Sieur de Poutrincourt</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/7/78/Samuel_de_Champlain_arrive_%C3%A0_Qu%C3%A9bec_-_George_Agnew_Reid_-_1909.jpg">Fondateur de la colonie de Port-Royal en Nouvelle-France.</desc></seg> arrivé prés du<lb/>
+                <seg><term>Fort Royal</term><desc synch="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Port-Royal_Nova-Scotia_1.jpg/1024px-Port-Royal_Nova-Scotia_1.jpg">Établissement fortifié de Port-Royal.</desc></seg>, <choice><orig>vn</orig><reg>un</reg></choice> compagnon de gaillarde hu-<lb/>
+                meur qui l&apos;attendoit de pié ferme, dit ce qui<lb/>
+                s&apos;en&s-long;uit.
+            </stage>
+                <lg>
+                    <figure xml:id="section-48">
+                        <graphic url="../images/photos/photo-48.png"/>
+                    </figure>
+                    <l>Après avoir <choice><orig>long temps</orig><reg>longtemps</reg></choice>&nbsp;<view>(<hi rend="normal">Sagamos</hi>)</view> de&s-long;iré</l>
+                    <l>Ton retour en ce lieu, <choice><orig>en fin</orig><reg>enfin</reg></choice> le ciel <gloss corresp="gloss-19">iré</gloss></l>
+                    <l>A eu pitié de nous, &amp; nous mon&s-long;trant ta face<app><rdg wit="#E09"></rdg><rdg wit="#E11 #E12 #E17 #E18">,</rdg></app></l>
+                    <l><app><rdg wit="#E09 #E11 #E12">Il nous fait paroitre</rdg><rdg wit="#E17 #E18" ana="exception ici">Nous a fauori&s-long;é d&apos;; E11 : Il nous a fait paroitre</rdg></app>&nbsp;<choice><orig>vne</orig><reg>une</reg></choice>&nbsp;<app><rdg wit="#E09">incroiable</rdg><rdg wit="#E11 #E12 #E17 #E18">incroyable</rdg></app> grace.</l>
+                </lg>
+                <lg>
+                    <figure xml:id="section-49">
+                        <graphic url="../images/photos/photo-49.png"/>
+                    </figure>
+                    <l><gloss corresp="gloss-20">Sus</gloss>&nbsp;<gloss corresp="gloss-11">doncques</gloss> roti&s-long;&s-long;eurs, depen&s-long;iers, cui&s-long;iniers,</l>
+                    <l>Marmitons, pati&s-long;siers, frica&s-long;&s-long;eurs, taverniers,</l>
+                    <l>Mettez de&s-long;&s-long;us de&s-long;&s-long;ouz pots &amp; plats &amp; cui&s-long;ine,</l>
+                    <l>Qu&apos;on <gloss corresp="gloss-21">baille</gloss> à ces gens ci chacun &s-long;a <gloss corresp="gloss-22">quarte</gloss> pleine,</l>
+                    <l><choice><orig>Ie</orig><reg>Je</reg></choice> les voy alterez <seg><term><hi rend="normal">&s-long;icut terra &s-long;ine aqua</hi></term><desc synch="https://upload.wikimedia.org/wikipedia/commons/9/92/Bhs_psalm1.png">« Expandi manus meas ad te anima mea sicut terra sine aqua tibi » (Psaume 143, verset 6).</desc></seg>.</l>
+                    <l>Gar&s-long;on <app><rdg wit="#E09">depeche-toy</rdg><rdg wit="#E11 #E12 #E17 #E18">depeche toy</rdg></app>, <app><rdg wit="#E11 #E17 #E18"><gloss corresp="gloss-21">baille</gloss></rdg><rdg wit="#E09 #E12">baïlle</rdg></app> à chacun &s-long;on <choice><abbr>K</abbr><expan>caca</expan></choice>.</l>
+                    <l>Cui&s-long;iniers, ces canars &s-long;ont ilz point à la broche ?</l>
+                    <l>Qu&apos;on tuë ces poulets, que cette oye on embroche,</l>
+                </lg>
+                <pb n="11"/>
+                <lg>
+                    <figure xml:id="section-50">
+                        <graphic url="../images/photos/photo-50.png"/>
+                    </figure>
+                    <l><app><rdg wit="#E09 (le segment a été effacé dans toutes les autres versions)">Voici venir à nous <gloss corresp="gloss-23">force</gloss> bons compagnons</rdg><rdg wit="#E11 #E12 #E17 #E18"></rdg></app></l>
+                    <l>Autant deliberez des dents que des roignons.</l>
+                    <l>Entrez dedans, Me&s-long;sieurs, pour vôtre bien-venuë,</l>
+                    <l>Qu&apos;avant boire chacun hautement éternuë,</l>
+                    <l><choice><orig>A fin</orig><reg>Afin</reg></choice> de decharger toutes froides humeurs</l>
+                    <l>Et remplir voz cerveaux de plus douces vapeurs.</l>
+                </lg>
+            </sp>
+            <p>
+                <figure xml:id="section-51">
+                    <graphic url="../images/photos/photo-51.png"/>
+                </figure>
+                <choice><orig>Ie</orig><reg>Je</reg></choice> prie le lecteur excu&s-long;er &s-long;i <app><rdg wit="#E09 #E12">les</rdg><rdg wit="#E11 #E17 #E18">ces</rdg></app> rhimes ne &s-long;ont &s-long;i bien<lb/>
+                limées que les hommes delicats pourroient de&s-long;irer. Elles<lb/>
+                ont e&s-long;té faites à la hate. Mais <choice><orig>ne&#227;tmoins</orig><reg>neantmoins</reg></choice>&nbsp;<choice><orig>ie</orig><reg>je</reg></choice> les ay voulu<lb/>
+                in&s-long;erer ici, tant <app><rdg wit="#E09">pour ce</rdg><rdg wit="#E11 #E12 #E17 #E18">pour-ce</rdg></app> qu&apos;elles &s-long;ervent à nôtre <app><rdg wit="#E09">hi&s-long;toire</rdg><rdg wit="#E11 #E12 #E17 #E18">Hi&s-long;toire</rdg></app>,<lb/>
+                que pour montrer que nous vivions joyeu&s-long;ement. Le<lb/>
+                &s-long;urplus de cette action &s-long;e peut voir la fin du chap. 45.<lb/>
+                liv. 2. de mon Hi&s-long;toire de la Nouvelle France, pa. 617.
+                <figure xml:id="section-52">
+                    <graphic url="../images/photos/photo-52.png"/>
+                </figure>
+            </p>
+        </body>
+        <back>
+            <div type="glossary">
+                <head>Glossaire</head>
+                <list type="gloss">
+                    <head>Vocabulaire archaïque ou désuet</head>
+                    <headLabel>Ancien et moyen français</headLabel>
+                    <headItem>Français moderne</headItem>
+                    <label xml:id="gloss-1">parti</label>
+                    <item>partager</item>
+                    <label xml:id="gloss-2">moitre</label>
+                    <item>humide</item>
+                    <label xml:id="gloss-3">onc, oncq, onq</label>
+                    <item>locution adverbiale de temps (une fois, en quelques circonstances, lorsque)</item>
+                    <label xml:id="gloss-4">es, és</label>
+                    <item>en les</item>
+                    <label xml:id="gloss-5">cure</label>
+                    <item>souci</item>
+                    <label xml:id="gloss-6">oncques</label>
+                    <item>jamais</item>
+                    <label xml:id="gloss-7">hanner, ahanner</label>
+                    <item>se fatiguer</item>
+                    <label xml:id="gloss-8">faix</label>
+                    <item>poids</item>
+                    <label xml:id="gloss-9">ça</label>
+                    <item>ici</item>
+                    <label xml:id="gloss-10">los</label>
+                    <item>réputation</item>
+                    <label xml:id="gloss-11">doncques</label>
+                    <item>donc</item>
+                    <label xml:id="gloss-12">brandon</label>
+                    <item>torche</item>
+                    <label xml:id="gloss-13">bourdon</label>
+                    <item>membre viril (cf. le Roman de la Rose), ou bâton de pèlerin</item>
+                    <label xml:id="gloss-14">ouvrer</label>
+                    <item>façonner</item>
+                    <label xml:id="gloss-15">ores</label>
+                    <item>maintenant</item>
+                    <label xml:id="gloss-16">vaux</label>
+                    <item>vallées</item>
+                    <label xml:id="gloss-17">avecque</label>
+                    <item>avec</item>
+                    <label xml:id="gloss-18">derechef</label>
+                    <item>de nouveau</item>
+                    <label xml:id="gloss-19">iré</label>
+                    <item>en colère</item>
+                    <label xml:id="gloss-20">sus</label>
+                    <item>exclamation servant à inciter</item>
+                    <label xml:id="gloss-21">baille, baïlle</label>
+                    <item>donner</item>
+                    <label xml:id="gloss-22">quarte</label>
+                    <item>mesure de capacité</item>
+                    <label xml:id="gloss-23">force</label>
+                    <item>grand nombre de</item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>
